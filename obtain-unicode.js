@@ -53,8 +53,8 @@ module.exports = function ObtainUnicode(domstring) {
           // 2. Let b be d & 0x3FF.
           var b = d & 0x3FF;
 
-          // 3. Append to U the Unicode character with code point 216+210a+b.
-          U.push(216 + (210 * a) + b);
+          // 3. Append to U the Unicode character with code point 2^16+2^10*a+b.
+          U.push(65536 + (1024 * a) + b);
 
           // 4. Set i to i+1.
           i = i + 1;
