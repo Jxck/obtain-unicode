@@ -43,7 +43,7 @@ module.exports = function ObtainUnicode(domstring) {
       // 2. Otherwise, i < n−1:
       else if (i < n - 1) {
         // 1. Let d be the code unit in S at index i+1.
-        var d = S.charCodeAt(i+1);
+        var d = S.charCodeAt(i + 1);
 
         // 2. If 0xDC00 ≤ d ≤ 0xDFFF, then:
         if (0xDC00 <= d && d <= 0xDFFF) {
