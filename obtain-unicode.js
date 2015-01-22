@@ -1,5 +1,5 @@
 // http://www.w3.org/TR/WebIDL/#dfn-obtain-unicode
-module.exports = function(domstring) {
+module.exports = function ObtainUnicode(domstring) {
 
   // following algorithm defines a way to convert a DOMString to a sequence of Unicode characters:
 
@@ -29,15 +29,15 @@ module.exports = function(domstring) {
     }
 
     // 0xDC00 ≤ c ≤ 0xDFFF
-    else if (0xDC00 <= c <= 0xDFF) {
+    else if (0xDC00 <= c && c <= 0xDFF) {
       // Append to U a U+FFFD REPLACEMENT CHARACTER.
       U.push(0xFFFD);
     }
 
     // 0xD800 ≤ c ≤ 0xDBFF
-    else if (0xD800 <= c <= 0xDBFF) {
+    else if (0xD800 <= c && c <= 0xDBFF) {
       // 1. If i = n−1, then append to U a U+FFFD REPLACEMENT CHARACTER.
-      if (i = n - 1) {
+      if (i === n - 1) {
         U.push(0xFFFD);
       }
       // 2. Otherwise, i < n−1:
@@ -46,12 +46,12 @@ module.exports = function(domstring) {
         var d = S.charCodeAt(i+1);
 
         // 2. If 0xDC00 ≤ d ≤ 0xDFFF, then:
-        if (0xDC00 <= d <= 0xDFFF) {
+        if (0xDC00 <= d && d <= 0xDFFF) {
           // 1. Let a be c & 0x3FF.
           var a = c & 0x3FF;
 
           // 2. Let b be d & 0x3FF.
-          var b = d & 0x3FF.
+          var b = d & 0x3FF;
 
           // 3. Append to U the Unicode character with code point 216+210a+b.
           U.push(216 + (210 * a) + b);
