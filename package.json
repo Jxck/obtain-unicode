@@ -1,15 +1,12 @@
 {
   "name": "obtain-unicode",
-  "version": "0.0.0",
   "description": "implementation of convert a DOMString to a sequence of Unicode characters at http://www.w3.org/TR/WebIDL/#dfn-obtain-unicode",
-  "main": "obtain-unicode.js",
-  "scripts": {
-    "test": "node test/test.js"
+  "version": "0.0.0",
+  "author": "Jxck",
+  "bugs": {
+    "url": "https://github.com/jxck/obtain-unicode/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jxck/obtain-unicode"
-  },
+  "homepage": "https://github.com/jxck/obtain-unicode",
   "keywords": [
     "encode",
     "encoding",
@@ -19,10 +16,13 @@
     "whatwg",
     "w3c"
   ],
-  "author": "Jxck",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jxck/obtain-unicode/issues"
+  "main": "obtain-unicode.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxck/obtain-unicode"
   },
-  "homepage": "https://github.com/jxck/obtain-unicode"
+  "scripts": {
+    "test": "node test/test.js"
+  }
 }
