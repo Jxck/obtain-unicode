@@ -1,4 +1,4 @@
-var obtain = require('./obtain-unicode');
+var obtain = require('../obtain-unicode');
 
 var n = "09azAZあ𠮟";
 console.log(obtain(s));
