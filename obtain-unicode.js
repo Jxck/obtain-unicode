@@ -1,5 +1,5 @@
 // http://www.w3.org/TR/WebIDL/#dfn-obtain-unicode
-module.exports = function ObtainUnicode(domstring) {
+function ObtainUnicode(domstring) {
 
   // following algorithm defines a way to convert a DOMString to a sequence of Unicode characters:
 
@@ -137,3 +137,5 @@ if (!String.fromCodePoint) {
     }
   }());
 }
+
+this.ObtainUnicode = ObtainUnicode;

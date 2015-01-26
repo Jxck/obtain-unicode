@@ -1,10 +1,25 @@
-var obtain = require('../obtain-unicode');
+var ObtainUnicode =  ObtainUnicode || require('../obtain-unicode').ObtainUnicode;
 
-var n = "09azAZあ𠮟";
-console.log(obtain(s));
+// tests
+function assert(actual, expected) {
+  console.log('.');
+  console.assert(actual === expected, '\nact: ' + actual + '\nexp: ' + expected);
+}
 
-var s = "𠮟";
-console.log(obtain(s));
-
-var n = "🍻";
-console.log(obtain(n));
+(function test() {
+  [ "aAzZ09",
+     "~`!@",
+     "#$%^&",
+     "*()_+-=",
+     "{}|[]\:",
+     ";'<>?,./'",
+     "\"",
+     "あ亞",
+     "叱𠮟",
+     "🍻",
+     ""
+  ].forEach(function(expected) {
+    var actual = String.fromCodePoint.apply(null, ObtainUnicode(expected));
+    assert(actual, expected);
+  });
+})();
