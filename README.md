@@ -20,7 +20,7 @@ $ npm install obtain-unicode
 works in node and browser.
 Isomorphic !! no Browserify.
 
-```
+```typescript
 var ObtainUnicode =  ObtainUnicode || require('../obtain-unicode').ObtainUnicode;
 
 console.log(ObtainUnicode("beer!🍻"));
