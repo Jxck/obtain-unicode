@@ -45,7 +45,7 @@ and also add this type declare to your code.
 (because d.ts can't include this)
 
 ```typescript
-// polyfill for String.fromCharCode
+// polyfill for String.fromCodePoint
 declare var String: {
   new (value?: any): String;
   (value?: any): string;
