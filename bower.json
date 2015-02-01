@@ -1,9 +1,17 @@
 {
   "name": "obtain-unicode",
-  "main": "obtain-unicode.js",
-  "version": "0.0.3",
-  "homepage": "https://github.com/Jxck/obtain-unicode",
   "description": "implementation of convert a DOMString to a sequence of Unicode characters at http://www.w3.org/TR/WebIDL/#dfn-obtain-unicode and shim for String.fromCodePoint()",
+  "authors": [
+    "Jxck"
+  ],
+  "homepage": "https://github.com/Jxck/obtain-unicode",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "keywords": [
     "encode",
     "encoding",
@@ -13,15 +21,10 @@
     "whatwg",
     "w3c"
   ],
-  "authors": [
-    "Jxck"
-  ],
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "main": "obtain-unicode.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxck/obtain-unicode"
+  }
 }
