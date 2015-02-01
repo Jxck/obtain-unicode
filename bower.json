@@ -25,6 +25,6 @@
   "main": "obtain-unicode.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jxck/obtain-unicode"
+    "url": "git://github.com/jxck/obtain-unicode.git"
   }
 }
