@@ -1,7 +1,7 @@
 {
   "name": "obtain-unicode",
   "description": "implementation of convert a DOMString to a sequence of Unicode characters at http://www.w3.org/TR/WebIDL/#dfn-obtain-unicode and shim for String.fromCodePoint()",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Jxck",
   "bugs": {
     "url": "https://github.com/jxck/obtain-unicode/issues"
