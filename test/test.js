@@ -14,18 +14,19 @@ function assert(actual, expected) {
 })();
 
 (function test() {
-  [ 'aAzZ09',
-     '~`!@',
-     '#$%^&',
-     '*()_+-=',
-     '{}|[]:',
-     ';"<>?,./',
-     "'",
-     '\\',
-     'あ亞',
-     '叱𠮟',
-     '🍻',
-     ''
+  [
+    'aAzZ09',
+    '~`!@',
+    '#$%^&',
+    '*()_+-=',
+    '{}|[]:',
+    ';"<>?,./',
+    "'",
+    '\\',
+    'あ亞',
+    '叱𠮟',
+    '🍻',
+    ''
   ].forEach(function(expected) {
     var actual = String.fromCodePoint.apply(null, obtainUnicode(expected));
     assert(actual, expected);

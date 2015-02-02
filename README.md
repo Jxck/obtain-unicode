@@ -21,9 +21,9 @@ works in node and browser.
 Isomorphic !! no Browserify.
 
 ```typescript
-var ObtainUnicode =  ObtainUnicode || require('../obtain-unicode').ObtainUnicode;
+var obtainUnicode =  obtainUnicode || require('../obtain-unicode').obtainUnicode;
 
-console.log(ObtainUnicode("beer!🍻"));
+console.log(obtainUnicode('beer!🍻'));
 // [98, 101, 101, 114, 33, 127867]
 console.log(String.fromCodePoint(98, 101, 101, 114, 33, 127867));
 // "beer!🍻
