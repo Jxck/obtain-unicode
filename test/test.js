@@ -7,7 +7,7 @@ function assert(actual, expected) {
 }
 
 (function example() {
-  console.log(ObtainUnicode("beer!🍻"));
+  console.log(obtainUnicode('beer!🍻'));
   // [98, 101, 101, 114, 33, 127867]
   console.log(String.fromCodePoint(98, 101, 101, 114, 33, 127867));
   // "beer!🍻
@@ -18,9 +18,10 @@ function assert(actual, expected) {
      '~`!@',
      '#$%^&',
      '*()_+-=',
-     '{}|[]\:',
+     '{}|[]:',
      ';"<>?,./',
      "'",
+     '\\',
      'あ亞',
      '叱𠮟',
      '🍻',
