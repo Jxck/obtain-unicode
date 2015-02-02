@@ -138,4 +138,7 @@ if (!String.fromCodePoint) {
   }());
 }
 
+// export to
+// - window in browser
+// - module.exports in node.js
 this.obtainUnicode = obtainUnicode;
