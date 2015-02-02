@@ -1,5 +1,5 @@
 declare module ObtainUnicode {
-  function ObtainUnicode(domstring: string): number[];
+  function obtainUnicode(domstring: string): number[];
 }
 
 declare module 'obtain-unicode' {

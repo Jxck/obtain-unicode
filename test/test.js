@@ -1,4 +1,4 @@
-var ObtainUnicode =  ObtainUnicode || require('../obtain-unicode').ObtainUnicode;
+var obtainUnicode =  obtainUnicode || require('../obtain-unicode').obtainUnicode;
 
 // tests
 function assert(actual, expected) {
@@ -27,7 +27,7 @@ function assert(actual, expected) {
      '🍻',
      ''
   ].forEach(function(expected) {
-    var actual = String.fromCodePoint.apply(null, ObtainUnicode(expected));
+    var actual = String.fromCodePoint.apply(null, obtainUnicode(expected));
     assert(actual, expected);
   });
 })();
