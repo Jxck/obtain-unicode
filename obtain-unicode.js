@@ -78,15 +78,6 @@ function obtainUnicode(domstring) {
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {
   (function() {
-    var defineProperty = (function() {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
-      return result;
-    }());
     var stringFromCharCode = String.fromCharCode;
     var floor = Math.floor;
     var fromCodePoint = function() {
@@ -126,15 +117,12 @@ if (!String.fromCodePoint) {
       }
       return result;
     };
-    if (defineProperty) {
-      defineProperty(String, 'fromCodePoint', {
-        'value': fromCodePoint,
-        'configurable': true,
-        'writable': true
-      });
-    } else {
-      String.fromCodePoint = fromCodePoint;
-    }
+    Object.defineProperty(String, 'fromCodePoint', {
+      'value': fromCodePoint,
+      'enumerable': false,
+      'configurable': true,
+      'writable': true
+    });
   }());
 }
 
