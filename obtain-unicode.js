@@ -74,6 +74,15 @@ function obtainUnicode(domstring) {
   return U;
 }
 
+Object.defineProperty(String.prototype, 'codePoint', {
+  'value': function() {
+    return obtainUnicode(this);
+  },
+  'enumerable': false,
+  'configurable': true,
+  'writable': true
+});
+
 // https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint#Polyfill
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {

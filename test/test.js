@@ -28,7 +28,7 @@ function assert(actual, expected) {
     '🍻',
     ''
   ].forEach(function(expected) {
-    var actual = String.fromCodePoint.apply(null, obtainUnicode(expected));
+    var actual = String.fromCodePoint.apply(null, expected.codePoint());
     assert(actual, expected);
   });
 })();
